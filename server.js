@@ -30,6 +30,7 @@ var LISTEN_PORT = 4000;
 
 
 
-    var server = app.listen(LISTEN_PORT);
+var server = app.listen(LISTEN_PORT);
+console.log('Magic happens on port ' + LISTEN_PORT);
 
 //}

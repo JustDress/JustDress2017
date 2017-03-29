@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/JustDress/JustDress2017/issues"
   },
-  "homepage": "https://github.com/JustDress/JustDress2017#readme"
+  "homepage": "https://github.com/JustDress/JustDress2017#readme",
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.5.0",
+    "angularjs": "0.0.1",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
