@@ -1,30 +1,68 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="justDressApp">
-  <head>
+
+<head>
     <title>JustDress Demo</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/tether/tether.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-  </head>
+</head>
 
-  <body>
-    <div ng-view></div>
-  </body>
+<body ng-controller="layoutController">
+    <header>
 
-  <!-- TODO - Da inserire con Gulp -->
-  <!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
-  <script src="js/JQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
-  <script src="js/JQuery/jquery.jcarousel.pack.js" type="text/javascript"></script>
-  <script src="js/JQuery/jquery-func.js" type="text/javascript"></script>
+    </header>
 
-  <script src="js/AngularJs/angular.min.js"></script>
-  <script src="js/AngularJs/angular-route.js"></script>
-    <!--<script src="node_modules/ng-storage/ngStorage.min.js"></script>-->
+    <div ng-view>
 
-  <script src="app/Routing/app.home.routing.js"></script>
-  <script src="app/Controllers/app.home.controller.js"></script>
-  <script src="app/Factories/FactoryRestClient.js"></script>
-  <script src="app/Config.js"></script>
+    </div>
 
-  </html>
+    <footer class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="col-4 float-left" ng-repeat="info in footerInfos">
+                    <h6 class="text-uppercase font-weight-bold">{{info.category}}</h6>
+                    <ul class="list-unstyled">
+                        <li ng-repeat="item in info.items">{{item.subCategory}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" ng-repeat="brand in brands">
+                <div class="col-4">
+                    <h6 class="text-uppercase font-weight-bold">{{brand.category}}</h6>
+                </div>
+                <div class="col-2 float-left" ng-repeat="item in brand.items">
+                    <ul class="list-unstyled">
+                        <li ng-repeat="subItem in item">{{subItem.subCategory}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- TODO - Da inserire con Gulp -->
+<!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+<script src="js/JQuery/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="js/JQuery/jquery.jcarousel.pack.js" type="text/javascript"></script>
+<script src="js/JQuery/jquery-func.js" type="text/javascript"></script>
+
+<script src="js/AngularJs/angular.min.js"></script>
+<script src="js/AngularJs/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+<script src="app/Routing/app.home.routing.js"></script>
+<script src="app/Controllers/app.layout.controller.js"></script>
+<script src="app/Controllers/app.home.controller.js"></script>
+<script src="app/Factories/FactoryRestClient.js"></script>
+<script src="app/Config.js"></script>
+
+<script src="js/JQuery/tether.min.js"></script>
+<script src="js/JQuery/bootstrap.min.js"></script>
+
+</html>
