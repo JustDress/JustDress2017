@@ -20,23 +20,25 @@
 
     <footer class="container">
         <div class="row">
-            <div class="col-6">
-                <div class="col-4 float-left" ng-repeat="info in footerInfos">
+            <div class="col-6 p-0">
+                <div class="col-4 p-0 float-left" ng-repeat="info in footerInfos">
                     <h6 class="text-uppercase font-weight-bold">{{info.category}}</h6>
                     <ul class="list-unstyled">
-                        <li ng-repeat="item in info.items">{{item.subCategory}}</li>
+                        <li ng-repeat="item in info.items">
+                            <a ng-href="#{{item.url}}">{{item.subCategory}}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 p-0">
             </div>
         </div>
         <div class="row">
-            <div class="col-12" ng-repeat="brand in brands">
-                <div class="col-4">
+            <div class="col-12 p-0" ng-repeat="brand in brands">
+                <div class="col-4 p-0">
                     <h6 class="text-uppercase font-weight-bold">{{brand.category}}</h6>
                 </div>
-                <div class="col-2 float-left" ng-repeat="item in brand.items">
+                <div class="col-2 p-0 float-left" ng-repeat="item in brand.items">
                     <ul class="list-unstyled">
                         <li ng-repeat="subItem in item">{{subItem.subCategory}}</li>
                     </ul>

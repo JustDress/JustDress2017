@@ -3,32 +3,32 @@ var LayoutController = function($scope) {
             category: 'Just Dress',
             items: [{
                 subCategory: 'About',
-                url: '/pages/about'
+                url: '/about'
             }, {
                 subCategory: 'Termini e Condizioni',
-                url: '/pages/terms'
+                url: '/terms'
             }, {
                 subCategory: 'Lavora con Noi',
-                url: '/pages/withUs'
+                url: '/withUs'
             }, {
                 subCategory: 'Contatti',
-                url: '/pages/contacts'
+                url: '/contacts'
             }, ]
         },
         {
             category: 'Aiuto',
             items: [{
                 subCategory: 'FAQ',
-                url: '/pages/faq'
+                url: '/faq'
             }, {
                 subCategory: 'Consegna',
-                url: '/pages/delivery'
+                url: '/delivery'
             }, {
                 subCategory: 'Spedizione',
-                url: '/pages/shipment'
+                url: '/shipment'
             }, {
                 subCategory: 'Rimborso',
-                url: '/pages/refund'
+                url: '/refund'
             }, ]
         }, {
             category: 'Seguici',
@@ -58,7 +58,6 @@ var LayoutController = function($scope) {
         category: "Our Brands",
         items: brandItems
     }]
-    debugger;
 }
 
 LayoutController.$inject = ['$scope'];
